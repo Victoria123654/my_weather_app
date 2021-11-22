@@ -1,0 +1,53 @@
+h1 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 20px;
+  font-size: 18px;
+}
+.main-body {
+  margin: 0 auto;
+  width: 90%;
+  background: white;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 3%;
+}
+.image {
+  background-image: url("photo/background.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.city {
+  margin: 30px 30px;
+}
+.search {
+  margin: 30px 30px;
+}
+
+.day {
+  font-weight: 600px;
+  font-size: 20px;
+}
+
+.temp {
+  font-size: 15px;
+}
+
+#unit-f,
+#unit-c {
+  text-decoration: none;
+}
+
+.weather-block {
+  font-family: "Montserrat", sans-serif;
+  border: 0.7mm ridge rgba(186, 183, 190, 0.3);
+  border-radius: 5px;
+  margin: 20px 10px;
+  padding: 20px 0 60px 10px;
+}
