@@ -17,7 +17,7 @@ h3 {
   border-radius: 3%;
 }
 .image {
-  background-image: url("photo/background.jpg");
+  background-image: url("background.jpg");
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
