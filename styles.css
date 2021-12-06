@@ -30,6 +30,10 @@ h3 {
   margin: 30px 30px;
 }
 
+.temperature-now {
+  font-size: 20px;
+}
+
 .day {
   font-weight: 600px;
   font-size: 20px;

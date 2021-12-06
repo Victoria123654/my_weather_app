@@ -20,50 +20,62 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container-sm main-body image">
-      <form id="enter-city">
+    <div class="main-body">
+      <div class="container-sm image">
+        <form id="enter-city" class="mb-3">
+          <div class="row">
+            <div class="col-8">
+              <input class="form-control city" id="city" placeholder="City" />
+            </div>
+            <div class="col">
+              <button type="submit" class="btn btn-primary search">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1 class="text-muted" id="city-today">Today</h1>
+         <h3 id="date" class="text-muted"></h3>
         <div class="row">
-          <div class="col-8">
-            <input class="form-control city" id="city" placeholder="City" />
-          </div>
           <div class="col">
-            <button type="submit" class="btn btn-primary search">Search</button>
+        <h3>
+          ☀️ <span id="degree" class="temperature-now">64</span>°<a href="#" id="unit-f">F</a> |
+          <a href="#" id="unit-c">C</a>
+        </h3>
+           <br />
           </div>
-        </div>
-      </form>
-      <h1 class="text-muted" id="city-today">Today</h1>
-      <h3 id="date" class="text-muted"></h3>
-      <h3>
-        ☀️ <span id="degree">64</span>°<a href="#" id="unit-f">F</a> |
-        <a href="#" id="unit-c">C</a>
-      </h3>
-      <br />
+          <div class="col" class="text-muted>">
+            Precipitation
+            <br>
+            Wind
+          </div>
+      </div>
+        <!-- <div class="row days-week">
+          <div class="col weather-block">
+            <span class="day">Mon</span> <br />
+            <span class="temp">☀️ 69°F</span>
+          </div>
+          <div class="col weather-block">
+            <span class="day">Tue</span> <br />
+            <span class="temp">☀️ 71°F</span>
+          </div>
+          <div class="col weather-block">
+            <span class="day">Wed</span> <br />
+            <span class="temp">☀️ 74°F</span>
+          </div>
+          <div class="col weather-block">
+            <span class="day">Thu</span> <br />
 
-      <div class="row days-week">
-        <div class="col weather-block">
-          <span class="day">Mon</span> <br />
-          <span class="temp">☀️ 69°F</span>
-        </div>
-        <div class="col weather-block">
-          <span class="day">Tue</span> <br />
-          <span class="temp">☀️ 71°F</span>
-        </div>
-        <div class="col weather-block">
-          <span class="day">Wed</span> <br />
-          <span class="temp">☀️ 74°F</span>
-        </div>
-        <div class="col weather-block">
-          <span class="day">Thu</span> <br />
-
-          <span class="temp">☀️ 71°F</span>
+            <span class="temp">☀️ 71°F</span>
+          </div> -->
         </div>
       </div>
+      <small class="footer">
+        <a href="https://github.com/Victoria123654/my_weather_app.git"
+          >Source code</a
+        >
+      </small>
     </div>
-    <footer class="footer">
-      <a href="https://github.com/Victoria123654/my_weather_app.git"
-        >Source code</a
-      >
-    </footer>
     <script src="index.js"></script>
   </body>
 </html>
