@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Weather Application!</title>
+    <title>Weather Application</title>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,23 +34,27 @@
             </div>
           </div>
         </form>
-        <h1 class="text-muted" id="city-today">Today</h1>
-         <h3 id="date" class="text-muted"></h3>
+        <h1 class="text-muted" id="city-today"></h1>
+        <h3 id="date" class="text-muted"></h3>
         <div class="row">
-          <div class="col">
-        <h3>
-          ☀️ <span id="degree" class="temperature-now">64</span>°<a href="#" id="unit-f">F</a> |
-          <a href="#" id="unit-c">C</a>
-        </h3>
-           <br />
+          <div class="col-6">
+            <h3>
+              <span id="weather-icon" class="temperature-now"></span>
+              <span id="degree" class="temperature-now text-muted"></span>
+              <span class="unit"
+                >°<a href="#" id="unit-f">F</a>
+                |
+                <a href="#" id="unit-c">C</a>
+              </span>
+            </h3>
           </div>
-          <div class="col" class="text-muted>">
-            Precipitation
-            <br>
-            Wind
+          <div class="col text-muted weather-details">
+            Humidity: <span id="humidity"></span>%
+            <br />
+            Wind: <span id="wind"></span> mph
           </div>
-      </div>
-        <!-- <div class="row days-week">
+        </div>
+        <div class="row days-week">
           <div class="col weather-block">
             <span class="day">Mon</span> <br />
             <span class="temp">☀️ 69°F</span>
@@ -67,13 +71,14 @@
             <span class="day">Thu</span> <br />
 
             <span class="temp">☀️ 71°F</span>
-          </div> -->
+          </div>
         </div>
       </div>
       <small class="footer">
         <a href="https://github.com/Victoria123654/my_weather_app.git"
           >Source code</a
         >
+        by Viktoriia K
       </small>
     </div>
     <script src="index.js"></script>

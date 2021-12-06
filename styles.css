@@ -14,7 +14,6 @@ h3 {
   background: white;
   height: 100%;
   box-sizing: border-box;
-  border-radius: 3%;
 }
 .image {
   background-image: url("background.jpg");
@@ -22,6 +21,7 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 3%;
 }
 .city {
   margin: 30px 30px;
@@ -31,16 +31,27 @@ h3 {
 }
 
 .temperature-now {
-  font-size: 20px;
+  font-size: 40px;
 }
-
+.weather-details {
+  font-size: 15px;
+  font-weight: 500;
+}
+.unit {
+  position: relative;
+  bottom: 20px;
+  font-size: 15px;
+}
 .day {
   font-weight: 600px;
   font-size: 20px;
 }
 
 .temp {
+  position: relative;
+  top: 15px;
   font-size: 15px;
+  left: 10px;
 }
 
 #unit-f,
@@ -55,7 +66,8 @@ h3 {
   margin: 20px 10px;
   padding: 20px 0 60px 10px;
 }
-
 .footer {
-  text-align: center;
+  margin-top: 5px;
+  font-size: 10px;
+  padding-left: 5px;
 }
