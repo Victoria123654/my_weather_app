@@ -11,6 +11,8 @@ function setTemperature(response) {
   humidityElem.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
+  let description = document.querySelector("#weather-description");
+  description.innerHTML = response.data.weather[0].description;
   let icon = response.data.weather[0].icon;
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute(

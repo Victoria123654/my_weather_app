@@ -37,6 +37,9 @@ h3 {
   font-size: 15px;
   font-weight: 500;
 }
+#weather-description {
+  text-transform: capitalize;
+}
 .unit {
   position: relative;
   bottom: 20px;
