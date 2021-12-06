@@ -17,7 +17,7 @@ function setTemperature(response) {
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${icon}@2x.png`
+    `https://openweathermap.org/img/wn/${icon}@2x.png`
   );
 }
 //get your current location
