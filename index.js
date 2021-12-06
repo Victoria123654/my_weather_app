@@ -68,7 +68,7 @@ unitF.addEventListener("click", function (event) {
   event.preventDefault();
   let value = document.querySelector("#degree");
   let fahrenheit = (value.innerHTML * 9) / 5 + 32;
-  let value.innerHTML = Math.round(fahrenheit)
+  value.innerHTML = Math.round(fahrenheit);
 });
 
 let unitC = document.querySelector("#unit-c");
