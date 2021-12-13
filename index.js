@@ -1,7 +1,45 @@
 let apiKey = "be261a4a5f704a3b839452f102bc9548";
+//forecast day format
+function getDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+//get week forecast
+function getWeekForecast(response) {
+  let daily = response.data.daily;
+  let forecast = document.querySelector("#weather-forecast");
+  let htmlMessage = `<div class="row">`;
+  daily.forEach(function (day, index) {
+    if (index > 0 && index < 6) {
+      htmlMessage += `<div class="col-sm weather-block" data-hover="${Math.round(
+        day.temp.max
+      )}°F — ${Math.round(day.temp.min)}°F">
+            ${getDay(day.dt)}
+            <br />
+            <img src="http://openweathermap.org/img/wn/${
+              day.weather[0].icon
+            }.png" alt="" width="120" height="120" />
+            <br/>
+          </div>`;
+    }
+  });
+
+  htmlMessage += `</div>`;
+  forecast.innerHTML = htmlMessage;
+}
+
+// //Week forecast link
+function locationForecast(coords) {
+  let apiLink = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiLink).then(getWeekForecast);
+}
+
 //set temperature and city
 function setTemperature(response) {
-  console.log(response.data);
   fahrenheitTemp = Math.round(response.data.main.temp);
   let tempToday = document.querySelector("#degree");
   tempToday.innerHTML = fahrenheitTemp;
@@ -19,7 +57,9 @@ function setTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${icon}@2x.png`
   );
+  locationForecast(response.data.coord);
 }
+
 //get your current location
 function currentPosition(position) {
   let lat = position.coords.latitude;
