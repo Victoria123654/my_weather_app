@@ -20,7 +20,7 @@ function getWeekForecast(response) {
       )}°F — ${Math.round(day.temp.min)}°F">
             ${getDay(day.dt)}
             <br />
-            <img src="http://openweathermap.org/img/wn/${
+            <img src="https://openweathermap.org/img/wn/${
               day.weather[0].icon
             }.png" alt="" width="120" height="120" />
             <br/>
